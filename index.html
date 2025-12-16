@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coach Fléchettes 501</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Coach Dart</h1>
+        <p>Entrez le score restant pour connaître le meilleur coup à jouer.</p>
+    </header>
+    <main>
+        <div class="input-section">
+            <label for="remaining scrore"> Score actuel restant : </label>
+            <input type="number"
+                id="remaining-score" 
+                value="501"
+                min="2"
+                max="501"
+                >
+                <button onclick="display_advice">
+                    Calculer le Coup
+                </button>
+        </div>
+        <section id="advice_result" class="section-advice">
+            <h2>Meilleur Conseil :</h2>
+            <p>Cliquez sur "Calculer le Coup" ou entrez un nouveau score.</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
