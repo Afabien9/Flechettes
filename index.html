@@ -13,18 +13,19 @@
     </header>
     <main>
         <div class="input-section">
-            <label for="remaining scrore"> Score actuel restant : </label>
+            <label for="remaining-score"> Score actuel restant : </label>
             <input type="number"
                 id="remaining-score" 
                 value="501"
                 min="2"
                 max="501"
-                >
-                <button onclick="display_advice">
-                    Calculer le Coup
-                </button>
+            >
+            <button id="calculate-button">
+                Calculer le Coup
+            </button>
         </div>
-        <section id="advice_result" class="section-advice">
+        
+        <section id="advice-display" class="section-advice">
             <h2>Meilleur Conseil :</h2>
             <p>Cliquez sur "Calculer le Coup" ou entrez un nouveau score.</p>
         </section>

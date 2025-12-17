@@ -1,87 +1,109 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
-    text-align: center;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
     background-color: #007bff;
     color: white;
     padding: 20px;
-    border-radius: 8px 8px 0 0;
-    margin-bottom: 20px;
-}
-
-h1 {
-    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 main {
-    max-width: 600px;
-    margin: 0 auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+}
+
+.input-section {
     background-color: white;
-    padding: 30px;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.input-section label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.input-section input {
+#remaining-score {
     padding: 10px;
-    font-size: 1.2em;
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    width: 150px;
+    width: 100px;
     text-align: center;
-    margin-right: 10px;
+    font-size: 1.1em;
 }
 
-.input-section button {
-    padding: 10px 20px;
-    font-size: 1.1em;
+#calculate-button {
+    padding: 10px 15px;
     background-color: #28a745;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1em;
     transition: background-color 0.3s;
 }
 
-.input-section button:hover {
-    background-color: #1e7e34;
+#calculate-button:hover {
+    background-color: #218838;
 }
 
-.conseil-section {
-    margin-top: 30px;
+#advice-display {
+    background-color: white;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.conseil-section h2 {
+.conseil-option {
+    border-left: 5px solid #007bff;
+    padding-left: 15px;
+    margin: 15px 0;
+}
+
+.conseil-option h3 {
+    margin-top: 0;
     color: #007bff;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
 }
 
 .conseil-list {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
+    padding-left: 0;
 }
 
 .conseil-list li {
-    background-color: #e9ecef;
-    padding: 10px;
+    background-color: #f8f9fa;
     margin-bottom: 5px;
-    border-left: 5px solid #007bff;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+}
+
+.conseil-note {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    border: 1px solid #ffeeba;
+}
+
+.conseil-bust {
+    color: #dc3545;
     font-weight: bold;
+    border: 1px solid #dc3545;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f8d7da;
 }
