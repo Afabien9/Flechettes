@@ -1,35 +1,90 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coach Fléchettes 501</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Coach Dart</h1>
-        <p>Entrez le score restant pour connaître le meilleur coup à jouer.</p>
-    </header>
-    <main>
-        <div class="input-section">
-            <label for="remaining-score"> Score actuel restant : </label>
-            <input type="number"
-                id="remaining-score" 
-                value="501"
-                min="2"
-                max="501"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coach Darter Pro - Stats & Coaching</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <h1>COACH <span>DARTER</span></h1>
+      </header>
+
+      <div class="main-layout">
+        <section class="game-column">
+          <div class="glass-card total-display">
+            <label class="section-label">SCORE RESTANT</label>
+            <div id="current-total-score">501</div>
+            <div class="button-group">
+              <button id="undo-button">ANNULER</button>
+              <button id="reset-button">RÉINITIALISER</button>
+            </div>
+          </div>
+
+          <div class="glass-card input-card">
+            <label for="dart-input" class="section-label"
+              >SAISIE FLÉCHETTE</label
             >
-            <button id="calculate-button">
-                Calculer le Coup
-            </button>
-        </div>
-        
-        <section id="advice-display" class="section-advice">
-            <h2>Meilleur Conseil :</h2>
-            <p>Cliquez sur "Calculer le Coup" ou entrez un nouveau score.</p>
+            <div class="input-wrapper">
+              <input
+                type="text"
+                id="dart-input"
+                autocomplete="off"
+              />
+            </div>
+            <p class="help-text">Appuyez sur Entrée après chaque fléchette</p>
+          </div>
+
+          <div id="advice-display" class="results-container"></div>
         </section>
-    </main>
+
+        <aside class="stats-column">
+          <div class="glass-card stats-card">
+            <label class="section-label">STATISTIQUES</label>
+            <div class="stat-item">
+              <span class="stat-label">Moyenne / Volée</span>
+              <span id="avg-volley" class="stat-value">0.0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Fléchettes</span>
+              <span id="darts-count" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Points marqués</span>
+              <span id="points-scored" class="stat-value">0</span>
+            </div>
+
+            <div class="legend-box">
+              <div class="legend-row">
+                <p></p>
+                <span>D=Double | T=Triple | 50=BULL</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <footer class="history-section">
+        <div id="volley-score" class="volley-total"></div>
+        <div class="history-container" id="darts-history"></div>
+      </footer>
+    </div>
+
+    <template id="advice-template">
+      <div class="conseil-option">
+        <div class="option-header">
+          <span class="pro-badge">FINISH RECOMMANDÉ</span>
+        </div>
+        <div class="dart-row"></div>
+      </div>
+    </template>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
